@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Order ID</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="css\message.css" />
+</head>
+<body>
+    <nav class="header">
+        <div class="logo"> <img src="asset\logo 2.png" alt=""></div>
+        <div class="menuToggle"><a href="#"></a><i class="fa-solid fa-bars"></i></div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+    <script src="js\navbar.js"></script>
+
+    <div class="judul">
+        <div class="item">
+            <img src="asset\bg message.jpeg" style="width: 100%;">
+            <div class="content"> 
+                <h1>Check Order ID</h1> 
+            </div>
+        </div>
+    </div>
+
+    <div class="check">
+        <div class="tracking-order">
+            <input id="idOrder" name="name" type="text" placeholder="Write Your Order ID">
+            <button type="submit" onclick="cekorder(event)">Search</button>
+            <div id="content-order">
+            </div>
+        </div>
+    </div>
+
+    <script src="js\message.js"></script>
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>Pawon Java</h2>
+                <p>Pawon Java was founded in 2023. We are engaged in ordering traditional food on the island of Java.</p>
+                <ul class="sci">
+                    <li><a href="https://www.instagram.com/hrhdn_1602/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec openhours">
+                <h2>Open Hours</h2>
+                <ul>
+                    <li>
+                        <span class="s1">Monday</span>
+                        <span>09:00 - 21:00 </span>
+                    </li>
+                    <li>
+                        <span class="s1">Tuesday</span>
+                        <span class="s2">09:00 - 21:00 </span>
+                    </li>
+                    <li>
+                        <span class="s1">Wednesday</span>
+                        <span class="s2">09:00 - 21:00 </span>
+                    </li>
+                    <li>
+                        <span class="s1">Thursday</span>
+                        <span class="s2">09:00 - 21:00 </span>
+                    </li>
+                    <li>
+                        <span class="s1">Friday</span>
+                        <span class="s2">09:00 - 21:00 </span>
+                    </li>
+                    <li>
+                        <span class="s1">Saturday</span>
+                        <span class="s2">09:00 - 21:00 </span>
+                    </li>
+                    <li>
+                        <span class="s1">Sunday</span>
+                        <span class="s2">09:00 - 21:00 </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Pawon Java</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-location-dot"></i></span><p><a href="#">Ahmad Yani Street No.18, Jakarta Pusat</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span><p><a href="tel:+6281234567899">+6281234567899</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span><p><a href="mailto:pawonjava@gmail.id">pawonjava@gmail.id</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>© 2023 Pawon Java. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
