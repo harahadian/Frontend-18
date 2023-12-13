@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Order ID</title>
+    <title>Check Order by Name</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="css\message.css" />
 </head>
@@ -24,21 +24,49 @@
         <div class="item">
             <img src="asset\bg message.jpeg" style="width: 100%;">
             <div class="content"> 
-                <h1>Check Order ID</h1> 
+                <h1>Check Order by Name</h1> 
             </div>
         </div>
     </div>
 
     <div class="check">
         <div class="tracking-order">
-            <input id="idOrder" name="name" type="text" placeholder="Write Your Order ID">
-            <button type="submit" onclick="cekorder(event)">Search</button>
+            <input id="idOrder" name="name" type="text" placeholder="Find Your Order By Name">
+            <button type="button" onclick="fetchMenuData()">Search</button>
             <div id="content-order">
             </div>
         </div>
     </div>
 
-    <script src="js\message.js"></script>
+    <script>
+        const API_BASE_URL = 'http://localhost:3000';
+    
+        async function fetchMenuData() {
+            const nameInput = document.getElementById('idOrder').value;
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/menu/${nameInput}`);
+                const data = await response.json();
+                displayMenuData(data);
+            } catch (error) {
+                console.error('Error fetching menu data:', error);
+            }
+        }
+
+        function displayMenuData(data) {
+            const contentOrderDiv = document.getElementById('content-order');
+            // Clear previous content
+            contentOrderDiv.innerHTML = '';
+
+            // Display the fetched data
+            data.forEach(menuItem => {
+                const menuItemDiv = document.createElement('div');
+                menuItemDiv.textContent = `ID: ${menuItem.id}, Name: ${menuItem.Customer_name}, Order: ${menuItem.Order}`;
+                contentOrderDiv.appendChild(menuItemDiv);
+            });
+        }
+
+    </script>
 
     <footer>
         <div class="container">
