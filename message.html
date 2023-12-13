@@ -39,7 +39,7 @@
     </div>
 
     <script>
-        const API_BASE_URL = 'http://localhost:3000';
+        const API_BASE_URL = 'https://backend-18-production.up.railway.app';
     
         async function fetchMenuData() {
             const nameInput = document.getElementById('idOrder').value;
@@ -61,7 +61,7 @@
             // Display the fetched data
             data.forEach(menuItem => {
                 const menuItemDiv = document.createElement('div');
-                menuItemDiv.textContent = `ID: ${menuItem.id}, Name: ${menuItem.Customer_name}, Order: ${menuItem.Order}`;
+                menuItemDiv.textContent = `ID: ${menuItem.id}, Name: ${menuItem.Customer_name}, Address : ${menuItem.Address}, Order: ${menuItem.Order}, Quantity: ${menuItem.Order_Quantity}`;
                 contentOrderDiv.appendChild(menuItemDiv);
             });
         }

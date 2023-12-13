@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://backend-18-production.up.railway.app';
 
 async function addmenu() {
     const Customer_name = document.getElementById('name').value;
